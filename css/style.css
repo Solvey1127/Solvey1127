@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2ff 0%, #f8fbff 100%);
+  padding: 30px 20px;
+}
+
+.nav {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 18px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 16px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  background: #91d5ff;
+  transform: translateY(-2px);
+}
+
+.nav a.active {
+  background: #1890ff;
+  color: #fff;
+}
+
+.card {
+  max-width: 1000px;
+  margin: 0 auto 30px !important;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 86, 184, 0.15);
+  border: 1px solid #d6efff;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #1890ff;
+  text-align: left;
+}
+
+.grid-box {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* 渐变按钮 1：豆包风格（紫→粉）*/
+.btn-1 {
+  width: 220px;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 渐变按钮 2：DeepSeek 科技风（青→蓝）*/
+.btn-2 {
+  width: 220px;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 渐变按钮 3：B站 粉蓝渐变 */
+.btn-3 {
+  width: 220px;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #f472b6, #60a5fa);
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 渐变按钮 4：相册 暖橙→黄 */
+.btn-4 {
+  width: 220px;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #f97316, #eab308);
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 悬浮效果 */
+.btn-1:hover,
+.btn-2:hover,
+.btn-3:hover,
+.btn-4:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* 点击效果 */
+.btn-1:active,
+.btn-2:active,
+.btn-3:active,
+.btn-4:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* 流光效果 */
+.btn-1::before,
+.btn-2::before,
+.btn-3::before,
+.btn-4::before {
+  内容: '';
+  位置: absolute;
+  顶部: 0;
+  左侧: -100%;
+  宽度: 100%;
+  高度: 100%;
+  背景: 线性渐变(90度, 透明, rgba(255,255,255,0.2), 透明);
+  过渡: 左移 0.5秒 缓动;
+}
+
+.btn-1:hover::before,
+.btn-2:hover::before,
+.btn-3:hover::before,
+.btn-4:hover::before {
+  左: 100%;
+}
+
+/* 相册图片布局不变 */
+.album-grid {
+  显示: 网格;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  间距: 20像素;
+}
+
+.album-grid img {
+  宽度: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #f0f0f0;
+  border: 2px solid #ccc;
+  transition: transform 0.3s;
+}
+
+.album-grid img:hover {
+  transform: scale(1.05);
+}
